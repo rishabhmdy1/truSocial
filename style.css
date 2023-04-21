@@ -1,0 +1,724 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-color-r: 29;
+    --primary-color-g: 155;
+    --primary-color-b: 240;
+
+    --color-white-r: 255;
+    --color-white-g: 255;
+    --color-white-b: 255;
+
+    --color-search-r: 240;
+    --color-search-g: 238;
+    --color-search-b: 246;
+
+    --color-input-r: 0;
+    --color-input-g: 0;
+    --color-input-b: 0;
+
+    --color-white: rgb(var(--color-white-r), var(--color-white-g), var(--color-white-b));
+    --color-light: rgb(240, 238, 246);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-primary: rgb(var(--primary-color-r), var(--primary-color-g), var(--primary-color-b));
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-dark: rgb(21, 32, 43);
+    --color-black: hsl(252, 30%, 10%);
+    --color-search: rgb(var(--color-search-r), var(--color-search-g), var(--color-search-b));
+    --color-input: rgb(var(--color-input-r), var(--color-input-g), var(--color-input-b));
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    overflow-x: hidden;
+}
+
+/* ----------Remove the below code later------------- */
+/* .middle{
+    border: 3px solid black;
+} */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo {
+    margin-right: 1rem;
+}
+
+.profile-photo {
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+img {
+    display: block;
+    width: 100%;
+
+}
+
+.btn {
+    display: inline-block;
+    padding: var(--btn-padding);
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: white;
+}
+
+.btn-right {
+    display: flex;
+    justify-content: center;
+    width: 7vw;
+    padding: var(--btn-padding);
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+.btn-right:hover {
+    opacity: 0.8;
+}
+
+.btn-primary-right {
+    background: var(--color-primary);
+    color: white;
+}
+.text-bold {
+    font-weight: 500;
+}
+
+.text-muted {
+    color: var(--color-gray);
+}
+.text-muted-request {
+    color: var(--color-gray);
+}
+
+/* --------------Navbar-------------------- */
+
+nav {
+    width: 100%;
+    background-color: var(--color-white);
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-search);
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+}
+
+nav .search-bar input[type="search"] {
+    background-color: transparent;
+    min-width: 30vw;
+    padding-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-input);
+}
+
+nav .right-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav label {
+    margin-inline: 1rem;
+}
+
+
+
+/* --------------Main----------------------- */
+
+main {
+    position: relative;
+    top: 5.4rem;
+}
+
+main .container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 18vw auto 20vw;
+    column-gap: 2rem;
+    position: relative;
+}
+
+main .container .left {
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-left);
+}
+
+main .container .left .profile {
+    padding: var(--card-padding);
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.left .sidebar {
+    margin-top: 1rem;
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+}
+
+.left .sidebar .menu-items {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 4rem;
+    transition: all 50ms ease;
+    position: relative;
+    gap: 1rem;
+}
+
+.left .sidebar .active h3,
+.left .sidebar .active i {
+    color: var(--color-primary);
+}
+
+.left .sidebar .menu-items:first-child {
+    border-top-left-radius: var(--card-border-radius);
+    border-top-right-radius: var(--card-border-radius);
+}
+
+.left .sidebar .menu-items:last-child {
+    border-bottom-left-radius: var(--card-border-radius);
+    border-bottom-right-radius: var(--card-border-radius);
+}
+
+.left .sidebar .menu-items:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.left .sidebar i {
+    font-size: 1.3rem;
+    color: var(--color-gray);
+    margin: 0 0.2rem 0 2rem;
+    position: relative;
+}
+
+/* 9+ and 6 msg will come to it later  */
+
+/* .left .sidebar i .notification-count{
+    color: white;
+    background-color: var(--color-danger);
+    font-size: 0.7rem;
+    width: fit-content;
+    border-radius: var(--border-radius);
+    padding: 0.1rem 0.4rem;
+} */
+
+.left .btn {
+    font-size: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.7rem 0;
+}
+
+.left .notifications-popup {
+    border-radius: var(--card-border-radius);
+    background: var(--color-white);
+    position: absolute;
+    left: 20vw;
+    top: 0vh;
+    white-space: nowrap;
+    z-index: 10;
+    display: none;
+    border: 0.1rem solid var(--color-input);
+    box-shadow: 0 0 0.2rem var(--color-input);
+    /*later will change it using javascript*/
+}
+
+.notification-body {
+    margin-left: 1rem;
+}
+
+.left .notification-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 1rem 1.5rem;
+
+}
+
+.left .notification-message {
+    display: block;
+}
+
+.left .notifications-popup::before {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    border-bottom: 0.1rem solid var(--color-input);
+    display: block;
+    background-color: var(--color-white);
+    position: absolute;
+    left: -0.9rem;
+    top: 1.2rem;
+    transform: rotate(45deg);
+    border-radius: 0.3rem;
+    
+}
+
+.left .sidebar .menu-items .theme-box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 500;
+
+}
+
+/* ----------Stories-------------- */
+
+.middle .stories {
+    display: flex;
+    align-items: center;
+}
+
+.middle .story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap;
+    margin: 0.2rem;
+}
+
+.profile-photo-story {
+    width: 3.5rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid var(--color-black);
+}
+
+.middle .stories .story .name {
+    font-size: 0.7rem;
+}
+
+.middle .create-post {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    width: 100%;
+    background-color: var(--color-white);
+    padding: 0.4rem var(--card-padding);
+    border-radius: var(--border-radius);
+
+}
+
+
+.middle .create-post input[type=text] {
+    justify-self: start;
+    width: 100%;
+    padding: 0 1rem;
+    background-color: transparent;
+    color: var(--color-input);
+    font-weight: 800;
+
+}
+
+.middle .feeds .feed {
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.middle .feeds .feed .head {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.middle .feeds .feed .head .user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.middle .feeds .feed .photo {
+    margin: 1rem 0 0.2rem 0;
+    overflow: hidden;
+}
+
+.middle .feeds .feed .photo img {
+    border-radius: var(--card-border-radius);
+}
+
+.middle .feeds .feed .action-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    margin: 0.6rem;
+}
+
+.middle .feeds .feed .liked-by {
+    display: flex;
+    align-items: center;
+    margin-left: 0.6rem;
+}
+
+.middle .feeds .feed .liked-by span {
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: var(--border-radius);
+    display: block;
+    overflow: hidden;
+    border: 2px solid var(--color-white);
+    margin-left: -0.6rem;
+}
+
+.middle .feeds .feed .liked-by p {
+    margin-left: 0.4rem;
+}
+
+/* --------------Right----------------- */
+main .container .right {
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-right);
+    bottom: 0;
+
+}
+
+main .container .right .messages {
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+
+}
+
+.right .messages .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.right .messages i {
+    font-size: 1rem;
+    margin: 0.2rem 0.7rem;
+}
+
+.right .messages .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-search);
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    padding-right: 0.5rem;
+
+
+}
+
+.right .messages .search-bar input[type="search"] {
+    width: 100%;
+    background-color: transparent;
+    padding: 0.3rem 0.1rem;
+    font: 1rem;
+    font-weight: 500;
+    color: var(--color-input);
+
+}
+
+.right .messages .category {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right .messages .category h6 {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--color-white);
+    font: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.right .messages .category .message-requests {
+    color: var(--color-primary);
+}
+
+.right .messages .category .active {
+    border-color: var(--color-dark);
+}
+
+.right .messages .message {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.right .messages .message:last-child {
+    margin-bottom: 0;
+}
+
+.right .messages .message p {
+    font-size: 0.8rem;
+}
+
+.right .messages .message .profile-photo {
+    overflow: visible;
+}
+
+.right .messages .message .profile-photo img {
+    border-radius: 50%;
+
+}
+
+.right .messages .message .profile-photo .active {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: var(--color-success);
+    position: relative;
+    bottom: 15px;
+    right: -35px;
+
+}
+
+/* -------------Friend Requests----------- */
+.right .friend-requests {
+    margin-top: 1rem;
+}
+
+.right .friend-requests h4 {
+    color: var(--color-gray);
+    margin: 1rem 0;
+}
+
+.right .request {
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-bottom: 0.7rem;
+}
+
+.right .request .info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.right .request .action {
+    display: flex;
+    gap: 1rem;
+}
+
+/* ==============Theme Customisation============ */
+
+.theme-container {
+    border-radius: var(--card-border-radius);
+    background-color: rgba(var(--color-white-r), var(--color-white-g), var(--color-white-b), 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    display: none;
+}
+
+.theme-box {
+
+    display: grid;
+    gap: 1rem;
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    border: 0.12rem solid var(--color-input);
+    padding: 2rem;
+    box-shadow: 0 0 0.3rem var(--color-input);
+
+}
+
+.theme-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+
+
+}
+
+.theme-middle {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 14vw 14vw 14vw;
+    justify-content: center;
+
+}
+
+.theme-items {
+    width: 14vw;
+    border: 0.11rem solid var(--color-input);
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.theme-items:hover {
+    border: 0.15rem solid var(--color-primary);
+}
+
+.theme-bottom {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    overflow: hidden;
+}
+
+.theme-done {
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 0.6em;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* --------------Media Queries------------- */
+
+@media screen and (max-width:1250px){
+    .container {
+        width: 96%;
+    }
+    .left .sidebar .menu-items h3{
+        display: none;
+    }
+    main .container {
+        grid-template-columns: 8vw auto 20vw;
+        column-gap: 0.8rem;
+    }
+    main .container .left .profile{
+        display: none;
+    }
+    .text-muted-request {
+        font-size: 0.85rem;
+    }
+    .left label{
+        display: none;
+    }
+    .left .sidebar .menu-items{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .left .sidebar .menu-items .uil{
+        margin: auto;
+    }
+}
+@media screen and (max-width:1000px){
+    main .container .right{
+        display: none;
+    }
+    main .container {
+        grid-template-columns: 8vw auto 0.5vw;
+    }
+}
+@media screen and (max-width:850px){
+    main .container {
+        grid-template-columns: 9vw auto 2vw;
+        
+    }
+}
+@media screen and (max-width:750px){
+    main .container {
+        grid-template-columns: 10vw auto 2vw;
+        
+    }
+}
+@media screen and (max-width:650px){
+    main .container {
+        grid-template-columns: 11vw auto 2vw;
+        
+    }
+    
+}
+@media screen and (max-width:550px){
+    main .container {
+        grid-template-columns: 12vw auto 2vw;
+        
+    }
+}
+@media screen and (max-width:450px){
+    main .container {
+        grid-template-columns: 14vw auto 2vw;
+        
+    }
+}
+@media screen and (max-width:350px){
+    main .container {
+        grid-template-columns: 16vw auto 2vw;
+        
+    }
+}
