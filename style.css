@@ -66,6 +66,9 @@ body {
     margin: 0 auto;
 }
 
+nav .container .menu{
+    display: none;
+}
 .logo {
     margin-right: 1rem;
 }
@@ -696,6 +699,26 @@ main .container .right .messages {
         grid-template-columns: 10vw auto 2vw;
         
     }
+    
+}
+@media screen and (max-width:700px){
+    nav .search-bar {
+        display: none;
+    }
+    nav .container .left-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    nav .container .menu{
+        display: block;
+    }
+    nav .container .menu i{
+        font-size: 1.3rem;
+    }
+
+
 }
 @media screen and (max-width:650px){
     main .container {
@@ -718,6 +741,7 @@ main .container .right .messages {
         grid-template-columns: 14vw auto 2vw;
         
     }
+    
 }
 @media screen and (max-width:350px){
     main .container {
