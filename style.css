@@ -725,10 +725,6 @@ main .container .right .messages {
         grid-template-columns: 11vw auto 2vw;
         
     }
-    .container {
-        width: 90%;
-    }
-    
 }
 @media screen and (max-width:550px){
     main .container {
