@@ -28,7 +28,7 @@ Getting Started:
 
 To get started with truSocial, simply download or clone the repository to your local machine. You can then open the index.html file in your web browser to start using the website.
 
-Contributing:
+How to contribute : 
 
 Contributions to truSocial are always welcome! If you'd like to contribute, please fork the repository, make your changes, and submit a pull request. We'll review your changes and merge them if they meet our guidelines.
 
