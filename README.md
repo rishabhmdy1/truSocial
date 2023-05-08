@@ -1,6 +1,6 @@
-# truSocial - a-social-media-web-app
+# truSocial - fully responsive social media website
 
-A fully responsive social media website - truSocial. 
+Fully responsive social media website - truSocial. 
 
 Access the website here : https://imrishab.github.io/truSocial/
 
