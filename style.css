@@ -307,15 +307,6 @@ main .container .left .profile {
 .bottombar .active i {
     color: var(--color-primary);
 }
-
-
-
-.bottombar .menu-items:hover {
-    background-color: rgb(245, 245, 245);
-}
-
-
-
 .left .btn {
     font-size: 1rem;
     margin-top: 1rem;
@@ -770,9 +761,6 @@ main .container .right .messages {
     font-size: 1.2rem;
     cursor: pointer;
 }
-
-
-
 /* --------------Media Queries------------- */
 
 @media screen and (max-width:1250px) {
