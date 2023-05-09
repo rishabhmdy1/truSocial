@@ -255,16 +255,69 @@ main .container .left .profile {
     position: relative;
 }
 
-/* 9+ and 6 msg will come to it later  */
+/* ============bottombar================== */
 
-/* .left .sidebar i .notification-count{
-    color: white;
-    background-color: var(--color-danger);
-    font-size: 0.7rem;
-    width: fit-content;
-    border-radius: var(--border-radius);
-    padding: 0.1rem 0.4rem;
-} */
+.bottomwrapper {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.bottombar {
+    width: 90vmin;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1.25rem;
+    margin-right: 0.9rem;
+
+
+}
+.bottombar .menu-items {
+    width: auto;
+    position: relative;
+ 
+    cursor: pointer;
+    transition: all 50ms ease;
+
+}
+.bottombar .menu-items i{
+    position: absolute;
+    left: -0%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+  .menuitems i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+.bottombar .active i {
+    color: var(--color-primary);
+}
+
+.bottombar .menu-items i {
+
+    position: relative;
+    font-size: 1.5rem;
+    
+    color: var(--color-gray);
+
+}
+.bottombar .menu-items:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+
 
 .left .btn {
     font-size: 1rem;
@@ -334,7 +387,7 @@ main .container .left .profile {
 /* ----------Stories-------------- */
 
 .middle .stories {
-    
+
     width: 100%;
     overflow-x: auto;
     display: flex;
@@ -742,11 +795,17 @@ main .container .right .messages {
     nav .container .menu i {
         font-size: 1.3rem;
     }
+
     nav .right-section {
         display: none;
-       
+
     }
 
+    .bottombar {
+        display: flex;
+
+
+    }
 
 }
 
@@ -774,8 +833,6 @@ main .container .right .messages {
 
 @media screen and (max-width:550px) {}
 
-@media screen and (max-width:400px) {
-    
-}
+@media screen and (max-width:400px) {}
 
 @media screen and (max-width:350px) {}
