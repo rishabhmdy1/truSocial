@@ -1,13 +1,17 @@
 const menuItems = document.querySelectorAll('.menu-items');
 const messagesNotification = document.querySelector('#messages-notification');
+const bottomMessagesNotification = document.querySelector('#bottom-messages-notification');
+const bottomMessageWrapper = document.querySelector('.bottom-message-wrapper');
 const messages = document.querySelector('.messages');
 const message = document.querySelectorAll('.message');
 const messageSearch = document.querySelector('#message-search');
+const bottomMessageSearch = document.querySelector('#bottom-message-search');
 const notifications = document.querySelector('#notifications');
 const notificationsPopup = document.querySelector('.notifications-popup');
 const createPost = document.querySelector('.create-post');
 const searchBarMiddle = document.querySelector('.search-bar-middle');
 const themeContainer = document.querySelector('.theme-container');
+const themeBox = document.querySelector('.theme-box');
 const themeSelector = document.querySelector('#theme-selector');
 const bottomThemeSelector = document.querySelector('#bottom-theme-selector');
 const themeDone = document.querySelector('.theme-done');
@@ -52,20 +56,42 @@ const searchMessage = () => {
         }
     })
 }
+const searchBottomMessage = () => {
+    const val = bottomMessageSearch.value.toLowerCase();
+    console.log(val);
+    message.forEach(chat => {
+        let name = chat.querySelector('h5').textContent.toLowerCase();
+        if (name.indexOf(val) != -1) {
+            chat.style.display = 'flex';
+        } else {
+            chat.style.display = 'none';
+        }
+    })
+}
 messageSearch.addEventListener('keyup', searchMessage);
+bottomMessageSearch.addEventListener('keyup', searchBottomMessage);
 
 
 messagesNotification.addEventListener('click', () => {
-    
+
     messages.style.border = '0.15rem solid var(--color-primary)';
-    
-    
+
+
 
     setTimeout(() => {
         messages.style.border = 'none';
     }, 2000);
 })
 
+bottomMessagesNotification.addEventListener('click', () => {
+    if (bottomMessageWrapper.style.display == 'block') {
+        bottomMessageWrapper.style.display = 'none'
+    }
+    else {
+        bottomMessageWrapper.style.display = 'block'
+    }
+
+})
 
 notifications.addEventListener('click', () => {
     notificationsPopup.style.display = 'block';
@@ -80,14 +106,18 @@ document.addEventListener('click', (event) => {
         createPost.style.border = 'none';
     }
 });
-
+document.addEventListener('click', (event) => {
+    if (!bottomMessagesNotification.contains(event.target)) {
+        bottomMessageWrapper.style.display = 'none'
+    }
+});
 
 
 themeSelector.addEventListener('click', () => {
     themeContainer.style.display = 'grid'
 
 })
-bottomThemeSelector.addEventListener('click', ()=>{
+bottomThemeSelector.addEventListener('click', () => {
     themeContainer.style.display = 'grid'
 })
 
@@ -95,6 +125,21 @@ themeDone.addEventListener('click', () => {
     themeContainer.style.display = 'none'
 
 })
+
+
+
+
+themeContainer.addEventListener('click', (event) => {
+    if (themeContainer.style.display == 'grid') {
+        if (!themeBox.contains(event.target)) {
+            themeContainer.style.display = 'none'
+        }
+    }
+
+})
+
+
+
 
 
 
