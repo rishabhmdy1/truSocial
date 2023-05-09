@@ -9,6 +9,7 @@ const createPost = document.querySelector('.create-post');
 const searchBarMiddle = document.querySelector('.search-bar-middle');
 const themeContainer = document.querySelector('.theme-container');
 const themeSelector = document.querySelector('#theme-selector');
+const bottomThemeSelector = document.querySelector('#bottom-theme-selector');
 const themeDone = document.querySelector('.theme-done');
 const themeMiddle = document.querySelector('.theme-middle');
 const themeItems = document.querySelector('.theme-items');
@@ -85,6 +86,9 @@ document.addEventListener('click', (event) => {
 themeSelector.addEventListener('click', () => {
     themeContainer.style.display = 'grid'
 
+})
+bottomThemeSelector.addEventListener('click', ()=>{
+    themeContainer.style.display = 'grid'
 })
 
 themeDone.addEventListener('click', () => {

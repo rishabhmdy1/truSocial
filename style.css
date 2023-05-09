@@ -261,7 +261,8 @@ main .container .left .profile {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: white;
+    color: var(--color-dark);
+    background-color: var(--color-white);
     display: none;
     align-items: center;
     justify-content: center;
@@ -270,7 +271,8 @@ main .container .left .profile {
 
 .bottombar {
     width: 90vmin;
-    background-color: rgb(255, 255, 255);
+    color: var(--color-dark);
+    background-color: var(--color-white);
     display: flex;
     justify-content: space-between;
     align-items: center;
