@@ -57,18 +57,15 @@ body {
     overflow-x: hidden;
 }
 
-/* ----------Remove the below code later------------- */
-/* .middle{
-    border: 3px solid black;
-} */
 .container {
     width: 80%;
     margin: 0 auto;
 }
 
-nav .container .menu{
+nav .container .menu {
     display: none;
 }
+
 .logo {
     margin-right: 1rem;
 }
@@ -116,6 +113,7 @@ img {
     transition: all 300ms ease;
     font-size: 0.9rem;
 }
+
 .btn-right:hover {
     opacity: 0.8;
 }
@@ -124,6 +122,7 @@ img {
     background: var(--color-primary);
     color: white;
 }
+
 .text-bold {
     font-weight: 500;
 }
@@ -131,6 +130,7 @@ img {
 .text-muted {
     color: var(--color-gray);
 }
+
 .text-muted-request {
     color: var(--color-gray);
 }
@@ -316,7 +316,7 @@ main .container .left .profile {
     top: 1.2rem;
     transform: rotate(45deg);
     border-radius: 0.3rem;
-    
+
 }
 
 .left .sidebar .menu-items .theme-box {
@@ -334,8 +334,16 @@ main .container .left .profile {
 /* ----------Stories-------------- */
 
 .middle .stories {
+    
+    width: 100%;
+    overflow-x: auto;
     display: flex;
     align-items: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+    display: none;
 }
 
 .middle .story {
@@ -649,99 +657,125 @@ main .container .right .messages {
     cursor: pointer;
 }
 
+
+
 /* --------------Media Queries------------- */
 
-@media screen and (max-width:1250px){
+@media screen and (max-width:1250px) {
     .container {
         width: 96%;
     }
-    .left .sidebar .menu-items h3{
+
+    .left .sidebar .menu-items h3 {
         display: none;
     }
+
     main .container {
         grid-template-columns: 8vw auto 20vw;
         column-gap: 0.8rem;
     }
-    main .container .left .profile{
+
+    main .container .left .profile {
         display: none;
     }
+
     .text-muted-request {
         font-size: 0.85rem;
     }
-    .left label{
+
+    .left label {
         display: none;
     }
-    .left .sidebar .menu-items{
+
+    .left .sidebar .menu-items {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .left .sidebar .menu-items .uil{
+
+    .left .sidebar .menu-items .uil {
         margin: auto;
     }
 }
-@media screen and (max-width:1000px){
-    main .container .right{
+
+@media screen and (max-width:1000px) {
+    main .container .right {
         display: none;
     }
+
     main .container {
         grid-template-columns: 8vw auto 0.5vw;
     }
 }
-@media screen and (max-width:850px){
+
+@media screen and (max-width:850px) {
     main .container {
         grid-template-columns: 9vw auto 2vw;
-        
+
     }
 }
-@media screen and (max-width:750px){
+
+@media screen and (max-width:750px) {
     main .container {
         grid-template-columns: 10vw auto 2vw;
-        
+
     }
-    
+
 }
-@media screen and (max-width:700px){
+
+@media screen and (max-width:700px) {
     nav .search-bar {
         display: none;
     }
-    nav .container .left-box{
+
+    nav .container .left-box {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 1rem;
     }
-    nav .container .menu{
+
+    nav .container .menu {
         display: block;
     }
-    nav .container .menu i{
+
+    nav .container .menu i {
         font-size: 1.3rem;
     }
+    nav .right-section {
+        display: none;
+       
+    }
 
 
 }
-@media screen and (max-width:650px){
+
+@media screen and (max-width:675px) {
     main .container {
-        grid-template-columns: 11vw auto 2vw;
-        
+        grid-template-columns: 0 90vmin 0;
+
+
+    }
+
+    .left .sidebar {
+        display: none;
+    }
+
+    .container {
+        width: 95vmin;
+        margin: 0 auto;
+    }
+
+    nav .container {
+        width: 90vmin;
+        margin: 0 auto;
     }
 }
-@media screen and (max-width:550px){
-    main .container {
-        grid-template-columns: 12vw auto 2vw;
-        
-    }
-}
-@media screen and (max-width:450px){
-    main .container {
-        grid-template-columns: 14vw auto 2vw;
-        
-    }
+
+@media screen and (max-width:550px) {}
+
+@media screen and (max-width:400px) {
     
 }
-@media screen and (max-width:350px){
-    main .container {
-        grid-template-columns: 16vw auto 2vw;
-        
-    }
-}
+
+@media screen and (max-width:350px) {}
