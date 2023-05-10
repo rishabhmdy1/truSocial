@@ -882,6 +882,15 @@ main .container .right .messages {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none; /* remove underline */
+    -webkit-tap-highlight-color: transparent; /* remove click highlight for mobile devices */
+    -moz-outline-style: none; /* remove click outline for Firefox */
+    outline: none; /* remove click outline for other browsers */
+  }
+  
+
+
 /* --------------Media Queries------------- */
 
 @media screen and (max-width:1250px) {
