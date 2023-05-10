@@ -2,6 +2,7 @@ const menuItems = document.querySelectorAll('.menu-items');
 const messagesNotification = document.querySelector('#messages-notification');
 const bottomMessagesNotification = document.querySelector('#bottom-messages-notification');
 const bottomMessageWrapper = document.querySelector('.bottom-message-wrapper');
+const bottomBarMenuItems = document.querySelectorAll('.bottombar .menu-items')
 const messages = document.querySelector('.messages');
 const message = document.querySelectorAll('.message');
 const messageSearch = document.querySelector('#message-search');
@@ -36,13 +37,40 @@ menuItems.forEach(item => {
     item.addEventListener('click', () => {
         changeActiveitem();
         item.classList.add('active');
-        if (item.id != 'notifications') {
-            notificationsPopup.style.display = 'none';
-        } else {
-            notificationsPopup.style.display = 'block';
-        }
     })
 })
+
+
+
+// ============= clicking notification icon to make notification popup active==================
+// ============= after notification popup is active, click anywhere in screen to hide it==================
+
+document.addEventListener('click', function (event) {
+
+    if (event.target !== notifications && event.target !== notificationsPopup && !notificationsPopup.contains(event.target)) {
+
+        notificationsPopup.style.display = 'none';
+    }
+
+
+
+
+
+});
+
+notifications.addEventListener('click', function () {
+    if (notificationsPopup.style.display === 'block') {
+        notificationsPopup.style.display = 'none';
+    } else {
+        notificationsPopup.style.display = 'block';
+    }
+});
+
+
+
+
+// ====================================================================================
+
 // ==================messages=================
 const searchMessage = () => {
     const val = messageSearch.value.toLowerCase();
@@ -83,19 +111,23 @@ messagesNotification.addEventListener('click', () => {
     }, 2000);
 })
 
-bottomMessagesNotification.addEventListener('click', () => {
-    if (bottomMessageWrapper.style.display == 'block') {
-        bottomMessageWrapper.style.display = 'none'
-    }
-    else {
-        bottomMessageWrapper.style.display = 'block'
-    }
 
+
+
+
+bottomBarMenuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        if (item.id !== 'bottom-messages-notification') {
+            bottomMessageWrapper.style.display = 'none'
+        }
+        else {
+            bottomMessageWrapper.style.display = 'block'
+        }
+
+
+    })
 })
 
-notifications.addEventListener('click', () => {
-    notificationsPopup.style.display = 'block';
-})
 
 searchBarMiddle.addEventListener('click', () => {
     createPost.style.border = '0.15rem solid var(--color-primary)';
@@ -106,11 +138,7 @@ document.addEventListener('click', (event) => {
         createPost.style.border = 'none';
     }
 });
-document.addEventListener('click', (event) => {
-    if (!bottomMessagesNotification.contains(event.target)) {
-        bottomMessageWrapper.style.display = 'none'
-    }
-});
+
 
 
 themeSelector.addEventListener('click', () => {
@@ -125,8 +153,6 @@ themeDone.addEventListener('click', () => {
     themeContainer.style.display = 'none'
 
 })
-
-
 
 
 themeContainer.addEventListener('click', (event) => {
@@ -345,15 +371,3 @@ themeDarkPurple.addEventListener('click', () => {
     root.style.setProperty('--color-input-b', '255');
 })
 
-
-// menuItems.forEach(item => {
-//     item.addEventListener('click', () => {
-//         changeActiveitem();
-//         item.classList.add('active');
-//         if (item.id != 'notifications') {
-//             notificationsPopup.style.display = 'none';
-//         } else {
-//             notificationsPopup.style.display = 'block';
-//         }
-//     })
-// })

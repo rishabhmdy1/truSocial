@@ -736,77 +736,7 @@ main .container .right .messages {
     gap: 1rem;
 }
 
-/* ==============Theme Customisation============ */
 
-/* .theme-container {
-    border-radius: var(--card-border-radius);
-    background-color: rgba(var(--color-white-r), var(--color-white-g), var(--color-white-b), 0.5);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: grid;
-    place-items: center;
-    display: none;
-}
-
-.theme-box {
-
-    display: grid;
-    gap: 1rem;
-    background-color: var(--color-white);
-    border-radius: var(--card-border-radius);
-    border: 0.12rem solid var(--color-input);
-    padding: 2rem;
-    box-shadow: 0 0 0.3rem var(--color-input);
-
-}
-
-.theme-heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 1.2rem;
-
-
-}
-
-.theme-middle {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 14vw 14vw 14vw;
-    justify-content: center;
-
-}
-
-.theme-items {
-    width: 14vw;
-    border: 0.11rem solid var(--color-input);
-    border-radius: var(--card-border-radius);
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.theme-items:hover {
-    border: 0.15rem solid var(--color-primary);
-}
-
-.theme-bottom {
-    display: flex;
-    align-items: right;
-    justify-content: right;
-    overflow: hidden;
-}
-
-.theme-done {
-    background-color: var(--color-primary);
-    color: white;
-    border-radius: 0.6em;
-    padding: 0.7rem 1.5rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-} */
 
 
 .theme-container {
