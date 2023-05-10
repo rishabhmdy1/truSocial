@@ -1,8 +1,13 @@
 const menuItems = document.querySelectorAll('.menu-items');
+const hamburgerMenuItems = document.querySelectorAll('.hamburger-menu-items');
 const messagesNotification = document.querySelector('#messages-notification');
 const bottomMessagesNotification = document.querySelector('#bottom-messages-notification');
 const bottomMessageWrapper = document.querySelector('.bottom-message-wrapper');
+const navNotificationsPopup = document.querySelector('.nav-notifications-popup');
+const hamburgerWrapper = document.querySelector('.hamburger-wrapper');
 const bottomBarMenuItems = document.querySelectorAll('.bottombar .menu-items')
+const notificationIcon = document.querySelector('.notification-icon');
+const hamburgerIcon = document.querySelector('.hamburger-icon');
 const messages = document.querySelector('.messages');
 const message = document.querySelectorAll('.message');
 const messageSearch = document.querySelector('#message-search');
@@ -11,6 +16,8 @@ const notifications = document.querySelector('#notifications');
 const notificationsPopup = document.querySelector('.notifications-popup');
 const createPost = document.querySelector('.create-post');
 const searchBarMiddle = document.querySelector('.search-bar-middle');
+const navMobileItems = document.querySelectorAll('.nav-mobile-items ');
+const navMenuSelector = document.querySelectorAll('nav .menu');
 const themeContainer = document.querySelector('.theme-container');
 const themeBox = document.querySelector('.theme-box');
 const themeSelector = document.querySelector('#theme-selector');
@@ -39,6 +46,21 @@ menuItems.forEach(item => {
         item.classList.add('active');
     })
 })
+
+
+const changeHamburgerItem = () => {
+    hamburgerMenuItems.forEach(item => {
+        item.classList.remove('active');
+    })
+}
+
+hamburgerMenuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        changeHamburgerItem();
+        item.classList.add('active');
+    })
+})
+
 
 
 
@@ -165,9 +187,25 @@ themeContainer.addEventListener('click', (event) => {
 })
 
 
+navMobileItems.forEach(item => {
+    item.addEventListener('click', () => {
 
+        if (item.classList.contains('notification-icon')) {
+            navNotificationsPopup.style.display = 'block';
+            if (  hamburgerWrapper.style.display = 'block') {
+                hamburgerWrapper.style.display = 'none';
+            }
 
+        } else if (item.classList.contains('hamburger-icon')) {
+            hamburgerWrapper.style.display = 'block';
 
+            if (  navNotificationsPopup.style.display = 'block') {
+                navNotificationsPopup.style.display = 'none';
+            }
+        }
+    })
+
+})
 
 themeLightRed.addEventListener('click', () => {
 
