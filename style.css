@@ -64,6 +64,7 @@ body {
 
 nav .container .menu {
     display: none;
+
 }
 
 .logo {
@@ -144,6 +145,7 @@ nav {
     position: fixed;
     top: 0;
     z-index: 100;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
 nav .container {
@@ -255,6 +257,47 @@ main .container .left .profile {
     position: relative;
 }
 
+
+/* ============hamburger menu for mobile devices=========== */
+
+.hamburger-wrapper {
+    background-color: var(--color-white);
+    position: absolute;
+    top: 4rem;
+    right: 0.2rem;
+    width: 30vw;
+    display: none;
+}
+
+.hamburger-menu-items {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 3rem;
+    font-size: 2.7vw;
+    transition: all 50ms ease;
+    position: relative;
+    gap: 0.3rem;
+}
+
+
+
+.hamburger-wrapper .active h3,
+.hamburger-wrapper .active i {
+    color: var(--color-primary);
+}
+
+
+
+
+
+.hamburger-menu-items i {
+
+    color: var(--color-gray);
+    margin-left: 1rem;
+    position: relative;
+}
+
 /* ============bottombar================== */
 
 .bottomwrapper {
@@ -360,6 +403,54 @@ main .container .left .profile {
     border-radius: 0.3rem;
 
 }
+
+
+
+/* notifications mobile version */
+
+
+.nav-notifications-popup {
+    background: var(--color-white);
+    position: absolute;
+    margin: auto;
+    top: 4rem;
+    width: 100vw;
+    z-index: 10;
+    display: none;
+    box-shadow: 0px 1px 0.2rem var(--color-input);
+}
+
+.nav-notification-body {
+    margin-left: 1rem;
+}
+
+.nav-notification-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 1rem 1.5rem;
+
+}
+
+.nav-notification-message {
+    display: block;
+}
+
+/* .nav-notifications-popup::before {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    border-bottom: 0.1rem solid var(--color-input);
+    display: block;
+    background-color: var(--color-white);
+    position: absolute;
+    left: -0.9rem;
+    top: 1.2rem;
+    transform: rotate(45deg);
+    border-radius: 0.3rem;
+
+} */
+
 
 
 
@@ -812,6 +903,19 @@ main .container .right .messages {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+    /* remove underline */
+    -webkit-tap-highlight-color: transparent;
+    /* remove click highlight for mobile devices */
+    -moz-outline-style: none;
+    /* remove click outline for Firefox */
+    outline: none;
+    /* remove click outline for other browsers */
+}
+
+
+
 /* --------------Media Queries------------- */
 
 @media screen and (max-width:1250px) {
@@ -903,6 +1007,7 @@ main .container .right .messages {
         display: none;
     }
 
+
     nav .container .left-box {
         display: flex;
         align-items: center;
@@ -911,7 +1016,10 @@ main .container .right .messages {
     }
 
     nav .container .menu {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
     }
 
     nav .container .menu i {
