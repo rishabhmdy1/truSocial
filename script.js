@@ -223,7 +223,7 @@ notificationIcon.addEventListener('click', ()=>{
     console.log("hi")
 
 
-    if(hamburgerWrapper.style.display == 'block'){
+    if(hamburgerWrapper.style.display == 'flex'){
         hamburgerWrapper.style.display = 'none'
     }
 
@@ -245,7 +245,7 @@ hamburgerIcon.addEventListener('click', ()=>{
 
 
     if(hamburgerWrapper.style.display == 'none'){
-        hamburgerWrapper.style.display = 'block'
+        hamburgerWrapper.style.display = 'flex'
     }else{
         hamburgerWrapper.style.display = 'none'
     }
