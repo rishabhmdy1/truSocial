@@ -187,25 +187,81 @@ themeContainer.addEventListener('click', (event) => {
 })
 
 
-navMobileItems.forEach(item => {
-    item.addEventListener('click', () => {
 
-        if (item.classList.contains('notification-icon')) {
-            navNotificationsPopup.style.display = 'block';
-            if (  hamburgerWrapper.style.display = 'block') {
-                hamburgerWrapper.style.display = 'none';
-            }
 
-        } else if (item.classList.contains('hamburger-icon')) {
-            hamburgerWrapper.style.display = 'block';
 
-            if (  navNotificationsPopup.style.display = 'block') {
-                navNotificationsPopup.style.display = 'none';
-            }
-        }
-    })
 
+
+// under construction=========================================
+
+// navMobileItems.forEach(item => {
+//     item.addEventListener('click', () => {
+
+//         if (item.classList.contains('notification-icon')) {
+//             navNotificationsPopup.style.display = 'block';
+//             if (  hamburgerWrapper.style.display = 'block') {
+//                 hamburgerWrapper.style.display = 'none';
+//             }
+
+//         } else if (item.classList.contains('hamburger-icon')) {
+//             hamburgerWrapper.style.display = 'block';
+
+//             if (  navNotificationsPopup.style.display = 'block') {
+//                 navNotificationsPopup.style.display = 'none';
+//             }
+//         }
+//     })
+
+// })
+
+
+
+
+
+
+notificationIcon.addEventListener('click', ()=>{
+    console.log("hi")
+
+
+    if(hamburgerWrapper.style.display == 'block'){
+        hamburgerWrapper.style.display = 'none'
+    }
+
+
+    if(navNotificationsPopup.style.display == 'none'){
+        navNotificationsPopup.style.display = 'block'
+    }else{
+        navNotificationsPopup.style.display = 'none'
+    }
 })
+
+hamburgerIcon.addEventListener('click', ()=>{
+    console.log("bye")
+
+
+    if(navNotificationsPopup.style.display == 'block'){
+        navNotificationsPopup.style.display = 'none'
+    }
+
+
+    if(hamburgerWrapper.style.display == 'none'){
+        hamburgerWrapper.style.display = 'block'
+    }else{
+        hamburgerWrapper.style.display = 'none'
+    }
+})
+
+
+
+
+// under construction=========================================
+
+
+
+
+
+
+
 
 themeLightRed.addEventListener('click', () => {
 

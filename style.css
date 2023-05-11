@@ -262,18 +262,21 @@ main .container .left .profile {
 
 .hamburger-wrapper {
     background-color: var(--color-white);
-    position: absolute;
+    box-shadow: 0px 0px 20px  rgba(0, 0, 0, 0.2);
+    position: fixed;
     top: 4rem;
     right: 0.2rem;
     width: 30vw;
+    height: 16vh;
     display: none;
+    z-index: 100000000000000;
 }
 
 .hamburger-menu-items {
     display: flex;
     align-items: center;
     cursor: pointer;
-    height: 3rem;
+    height: 5vh;
     font-size: 2.7vw;
     transition: all 50ms ease;
     position: relative;
@@ -411,13 +414,14 @@ main .container .left .profile {
 
 .nav-notifications-popup {
     background: var(--color-white);
-    position: absolute;
+    position: fixed;
     margin: auto;
     top: 4rem;
     width: 100vw;
     z-index: 10;
     display: none;
-    box-shadow: 0px 1px 0.2rem var(--color-input);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    z-index: 100000000000000;
 }
 
 .nav-notification-body {
