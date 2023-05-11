@@ -34,6 +34,11 @@ const themeDarkPurple = document.querySelector('.theme-dark-purple');
 const themeDarkBlue = document.querySelector('.theme-dark-blue');
 const body = document.querySelector('body');
 
+window.onload = function () {
+    alert("page loaded")
+}
+
+
 const changeActiveitem = () => {
     menuItems.forEach(item => {
         item.classList.remove('active');
@@ -219,34 +224,34 @@ themeContainer.addEventListener('click', (event) => {
 
 
 
-notificationIcon.addEventListener('click', ()=>{
+notificationIcon.addEventListener('click', () => {
     console.log("hi")
 
 
-    if(hamburgerWrapper.style.display == 'flex'){
+    if (hamburgerWrapper.style.display == 'flex') {
         hamburgerWrapper.style.display = 'none'
     }
 
 
-    if(navNotificationsPopup.style.display == 'none'){
+    if (navNotificationsPopup.style.display == 'none') {
         navNotificationsPopup.style.display = 'block'
-    }else{
+    } else {
         navNotificationsPopup.style.display = 'none'
     }
 })
 
-hamburgerIcon.addEventListener('click', ()=>{
+hamburgerIcon.addEventListener('click', () => {
     console.log("bye")
 
 
-    if(navNotificationsPopup.style.display == 'block'){
+    if (navNotificationsPopup.style.display == 'block') {
         navNotificationsPopup.style.display = 'none'
     }
 
 
-    if(hamburgerWrapper.style.display == 'none'){
+    if (hamburgerWrapper.style.display == 'none') {
         hamburgerWrapper.style.display = 'flex'
-    }else{
+    } else {
         hamburgerWrapper.style.display = 'none'
     }
 })
