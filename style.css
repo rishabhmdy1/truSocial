@@ -67,7 +67,7 @@ nav .container .menu {
 
 }
 
-.logo {
+.left-box .logo {
     margin-right: 1rem;
 }
 
@@ -262,7 +262,7 @@ main .container .left .profile {
 
 .hamburger-wrapper {
     background-color: var(--color-white);
-    box-shadow: 0px 0px 20px  rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     position: fixed;
     top: 3.7rem;
     right: 0.7rem;
@@ -424,7 +424,7 @@ main .container .left .profile {
     z-index: 90;
     display: none;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-    
+
 }
 
 .nav-notification-body {
@@ -991,6 +991,42 @@ a {
     }
 }
 
+/* =============loading page================== */
+
+.loading-page {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    /* background-color: var(--color-white); */
+    background-color: var(--color-white);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.loading-page-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0rem;
+    justify-content: center;
+}
+.loading-page-wrapper .logo h1{
+font-size: 2.5rem;
+color: var(--color-black);
+}
+
+lottie-player{
+width: 25vmin;
+height: 12vmin;
+
+}
+
+
 @media screen and (max-width:850px) {
     main .container {
         grid-template-columns: 9vw auto 2vw;
@@ -1107,7 +1143,13 @@ a {
     }
 }
 
-@media screen and (max-width:550px) {}
+@media screen and (max-width:500px) {
+    lottie-player{
+
+        height: 20vmin;
+        
+        }
+}
 
 @media screen and (max-width:400px) {}
 

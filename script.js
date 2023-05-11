@@ -6,6 +6,7 @@ const bottomMessageWrapper = document.querySelector('.bottom-message-wrapper');
 const navNotificationsPopup = document.querySelector('.nav-notifications-popup');
 const hamburgerWrapper = document.querySelector('.hamburger-wrapper');
 const bottomBarMenuItems = document.querySelectorAll('.bottombar .menu-items')
+const loadingPage = document.querySelector('.loading-page')
 const notificationIcon = document.querySelector('.notification-icon');
 const hamburgerIcon = document.querySelector('.hamburger-icon');
 const messages = document.querySelector('.messages');
@@ -34,9 +35,12 @@ const themeDarkPurple = document.querySelector('.theme-dark-purple');
 const themeDarkBlue = document.querySelector('.theme-dark-blue');
 const body = document.querySelector('body');
 
+
 window.onload = function () {
-    alert("page loaded")
+    loadingPage.style.display='none'
 }
+
+
 
 
 const changeActiveitem = () => {
