@@ -66,10 +66,14 @@ nav .container .menu {
     display: none;
 
 }
-
-.github-icon img{
+.github-icon {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+}
+.github-icon img {
     height: 1.7rem;
-white-space: nowrap;
+ 
 }
 
 .left-box .logo {
@@ -181,7 +185,8 @@ nav .right-section {
     align-items: center;
     justify-content: space-between;
 }
-nav .right-section a img{
+
+nav .right-section a img {
     height: 40px;
 }
 
@@ -1016,21 +1021,22 @@ a {
 }
 
 
-.loading-page-wrapper{
+.loading-page-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0rem;
     justify-content: center;
 }
-.loading-page-wrapper .logo h1{
-font-size: 2.5rem;
-color: var(--color-black);
+
+.loading-page-wrapper .logo h1 {
+    font-size: 2.5rem;
+    color: var(--color-black);
 }
 
-lottie-player{
-width: 25vmin;
-height: 12vmin;
+lottie-player {
+    width: 25vmin;
+    height: 12vmin;
 
 }
 
@@ -1055,7 +1061,10 @@ height: 12vmin;
     nav .search-bar {
         display: none;
     }
-
+    .github-icon img {
+        height: 1.3rem;
+     
+    }
 
     nav .container .left-box {
         display: flex;
@@ -1152,11 +1161,11 @@ height: 12vmin;
 }
 
 @media screen and (max-width:500px) {
-    lottie-player{
+    lottie-player {
 
         height: 20vmin;
-        
-        }
+
+    }
 }
 
 @media screen and (max-width:400px) {}
