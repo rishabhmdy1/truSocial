@@ -67,6 +67,11 @@ nav .container .menu {
 
 }
 
+.github-icon img{
+    height: 1.7rem;
+white-space: nowrap;
+}
+
 .left-box .logo {
     margin-right: 1rem;
 }
@@ -175,6 +180,9 @@ nav .right-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+nav .right-section a img{
+    height: 40px;
 }
 
 nav label {
